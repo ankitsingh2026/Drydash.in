@@ -1291,10 +1291,10 @@ const Footer = () => {
 
           <div>
             <h4 className="text-white font-bold mb-6">Contact</h4>
-            <ul className="space-y-3 text-[#AEAEAF]">
+             <ul className="space-y-3 text-[#AEAEAF]">
               <li>support@drydash.in</li>
-              <li>+91-8287636979</li>
-              {/* <li>HA-85 Sector 144 Noida</li> */}
+              <li>+91 8287636979</li>
+              <li>Tower 15 211 ATS Le-grandiose noida 150, 201310</li>
             </ul>
           </div>
         </div>

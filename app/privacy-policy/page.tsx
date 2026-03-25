@@ -30,9 +30,9 @@ export default function PrivacyPolicy() {
                 1. Information We Collect
               </h2>
               <p className="text-[#AEAEAF] leading-relaxed">
-                We may collect your name, phone number, address, and payment
-                details to provide pickup, cleaning, and delivery services. We
-                also collect app usage data to improve your experience.
+                We may collect your name, phone number, address, precise and
+                approximate location data (with your permission), and payment
+                details to provide pickup, cleaning, and delivery services.
               </p>
             </section>
 
@@ -58,26 +58,39 @@ export default function PrivacyPolicy() {
               </p>
             </section>
             <section>
-              <h2 className="text-xl font-semibold mb-2">Location Data</h2>
+              <h2 className="text-xl font-semibold mb-2">
+                4. Location Information
+              </h2>
               <p className="text-[#AEAEAF] leading-relaxed">
-                DryDash may collect and use your device location (with your
-                permission) to provide accurate pickup and delivery services.
-                This helps us assign nearby service partners, estimate delivery
-                time, and improve your overall experience.
-                <br />
-                <br />
-                We do not track your location continuously. Location access is
-                only used when required for order placement, pickup, or delivery
+                Our app collects and processes your device location data
+                (precise and/or approximate location) with your permission to
+                provide core services such as pickup, delivery, and order
                 tracking.
                 <br />
                 <br />
-                You can enable or disable location permissions anytime through
+                Location data is used to:
+                <br />• Identify your pickup and delivery address
+                <br />• Assign nearby service partners
+                <br />• Provide real-time tracking and delivery updates
+                <br />
+                <br />
+                We do not collect location data in the background or when the
+                app is not in use. Location access is only used when required
+                while using the app.
+                <br />
+                <br />
+                Your location data is not sold to third parties. It may be
+                shared only with trusted service partners strictly for the
+                purpose of completing your service request.
+                <br />
+                <br />
+                You can enable or disable location access at any time through
                 your device settings.
               </p>
             </section>
             <section>
               <h2 className="text-xl font-semibold mb-2">
-                4. Third-Party Services
+                5. Third-Party Services
               </h2>
               <p className="text-[#AEAEAF] leading-relaxed">
                 We may use third-party services for payments, analytics, and
@@ -87,7 +100,7 @@ export default function PrivacyPolicy() {
             </section>
 
             <section>
-              <h2 className="text-xl font-semibold mb-2">5. Your Rights</h2>
+              <h2 className="text-xl font-semibold mb-2">6. Your Rights</h2>
               <p className="text-[#AEAEAF] leading-relaxed">
                 You can request access, correction, or deletion of your personal
                 data anytime by contacting our support team.
@@ -95,7 +108,7 @@ export default function PrivacyPolicy() {
             </section>
 
             <section>
-              <h2 className="text-xl font-semibold mb-2">6. Contact Us</h2>
+              <h2 className="text-xl font-semibold mb-2">7. Contact Us</h2>
               <p className="text-[#AEAEAF] leading-relaxed">
                 If you have any questions, reach out at:
                 <br />
@@ -164,9 +177,9 @@ const Footer = () => {
           <div>
             <h4 className="text-white font-bold mb-6">Contact</h4>
             <ul className="space-y-3 text-[#AEAEAF]">
-              <li>hello@drydash.com</li>
-              <li>+1 (555) 123-4567</li>
-              <li>123 Sneaker St, NY 10001</li>
+              <li>support@drydash.in</li>
+              <li>+91 8287636979</li>
+              <li>Tower 15 211 ATS Le-grandiose noida 150, 201310</li>
             </ul>
           </div>
         </div>
