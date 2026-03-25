@@ -14,9 +14,9 @@ export default function PrivacyPolicy() {
             Privacy Policy
           </h1>
 
-          <p className="text-[#6A6F76] mb-10">
-            Last updated: {new Date().toLocaleDateString()}
-          </p>
+         <p className="text-[#6A6F76] mb-10">
+  Last updated: March 2026
+</p>
 
           <p className="mb-6 text-lg leading-relaxed text-[#AEAEAF]">
             At <span className="font-semibold">DryDash</span>, we value your
