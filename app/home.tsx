@@ -796,7 +796,7 @@ const handleMove = (event: React.MouseEvent | React.TouchEvent) => {
               </div>
             </div>
             <div className="border-t border-[#ffffff]/5 pt-8 text-center text-[#6A6F76] text-sm">
-              © 2024 DryDash Inc. All rights reserved.
+              Copyright © GYLD Solutions Pvt. Ltd. All rights reserved.
             </div>
         </div>
       </footer>
