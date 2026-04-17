@@ -7,6 +7,14 @@ import { motion } from 'motion/react';
 import { InView } from '@/components/ui/in-view';
 import { CalendarBlankIcon, ShareNetworkIcon, CaretLeftIcon } from '@phosphor-icons/react';
 
+// export async function generateStaticParams() {
+//   return [
+//     { slug: "why-choose-drydash" },
+//     { slug: "laundry-tips" },
+//     { slug: "fabric-care-guide" }
+//   ];
+// }
+
 const BlogSlugPage = () => {
     const params = useParams();
     const slug = params?.slug as string;
