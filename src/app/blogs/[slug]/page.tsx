@@ -1,40 +1,28 @@
+import { BLOGS } from '@/lib/blogs';
 import ClientBlogPage from './ClientBlogPage';
 import { notFound } from 'next/navigation';
 
-// Centralized blog slugs (later you can fetch from DB / JSON)
-const BLOG_SLUGS = [
-  "why-choose-drydash",
-  "laundry-tips",
-  "fabric-care-guide"
-];
+export const dynamicParams = false;
 
 export async function generateStaticParams() {
-  return BLOG_SLUGS.map((slug) => ({ slug }));
+  return BLOGS.map((blog) => ({
+    slug: blog.slug,
+  }));
 }
 
-// (Optional but powerful) SEO per page
 export async function generateMetadata({ params }: { params: { slug: string } }) {
-  const { slug } = params;
-
-  const titles: Record<string, string> = {
-    "why-choose-drydash": "Why Choose Drydash | Best Laundry Service",
-    "laundry-tips": "Laundry Tips for Better Clothes Care",
-    "fabric-care-guide": "Complete Fabric Care Guide"
-  };
+  const blog = BLOGS.find((b) => b.slug === params.slug);
 
   return {
-    title: titles[slug] || "Blog",
-    description: "Read expert insights and tips from Drydash.",
+    title: blog ? `${blog.slug} | Washrz` : 'Blog',
+    description: 'Read expert insights and tips from Washrz.',
   };
 }
 
 export default function Page({ params }: { params: { slug: string } }) {
-  const { slug } = params;
+  const blog = BLOGS.find((b) => b.slug === params.slug);
 
-  // Safety check (important for static export)
-  if (!BLOG_SLUGS.includes(slug)) {
-    notFound();
-  }
+  if (!blog) notFound();
 
-  return <ClientBlogPage slug={slug} />;
+  return <ClientBlogPage slug={params.slug} />;
 }
