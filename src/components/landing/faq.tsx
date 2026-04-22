@@ -63,7 +63,7 @@ const Faq = () => {
                         },
                     }}
                 >
-                    <div className="w-full max-w-[1300px] mx-auto flex flex-col lg:flex-row justify-between items-start md:gap-16 gap-0 lg:gap-12 2xl:px-0 px-4 lg:px-10 z-10">
+                    <div className="max-w-[1100px] mx-auto flex flex-col lg:flex-row justify-between items-start md:gap-16 gap-0 lg:gap-12 2xl:px-0 px-4 lg:px-12 z-10">
 
                         {/* Left side text */}
                         <motion.div
@@ -74,7 +74,7 @@ const Faq = () => {
                             className="w-full lg:w-[40%] shrink-0 flex flex-col justify-between lg:sticky lg:top-24"
                         >
                             <div>
-                                <h2 className="text-4xl lg:text-5xl 2xl:text-[56px] font-medium text-white leading-tight mb-8">
+                                <h2 className="text-4xl lg:text-5xl 2xl:text-[56px] font-medium text-white leading-tight mb-8 font-didot">
                                     Get all your questions<br />
                                     answered here
                                 </h2>

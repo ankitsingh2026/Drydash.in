@@ -3,7 +3,8 @@
 import React from 'react';
 import Image from 'next/image';
 import PlaystoreLogo from '@/../public/Assests/SVG/playstore.svg';
-import { AndroidLogo, QrCode } from 'phosphor-react';
+import AppStoreLogo from '@/../public/Assests/SVG/app-store.svg';
+// import { AndroidLogo, QrCode } from 'phosphor-react';
 import {
     MorphingDialog,
     MorphingDialogTrigger,
@@ -12,7 +13,7 @@ import {
     MorphingDialogDescription,
     MorphingDialogContainer,
 } from '@/components/motion-primitives/morphing-dialog';
-import playStoreQR from '@/../public/Assests/SVG/play_store_download_QR.svg'
+import playStoreQR from '@/../public/Assests/SVG/Download_QR.svg'
 
 interface DownloadBtnProps {
     variant?: 'default' | 'minimal_black';
@@ -21,6 +22,15 @@ interface DownloadBtnProps {
 
 const DownloadBtn = ({ variant = 'default', varient }: DownloadBtnProps) => {
     const activeVariant = varient || variant;
+    const [isIOS, setIsIOS] = React.useState(false);
+
+    React.useEffect(() => {
+        // Detect if device is iOS
+        const userAgent = window.navigator.userAgent.toLowerCase();
+        if (/iphone|ipad|ipod/.test(userAgent)) {
+            setIsIOS(true);
+        }
+    }, []);
 
     return (
         <div className="will-change-transform w-full sm:w-auto flex flex-col justify-center">
@@ -75,11 +85,11 @@ const DownloadBtn = ({ variant = 'default', varient }: DownloadBtnProps) => {
                                     <MorphingDialogDescription disableLayoutAnimation className="flex flex-col gap-6 mt-4">
                                         <div className="flex items-center gap-4">
                                             <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-white text-[13px] font-bold shrink-0">1</div>
-                                            <span className="text-[#a1a1aa] text-[16px] font-medium tracking-wide">Open your camera app</span>
+                                            <span className="text-[#a1a1aa] text-[16px] font-medium tracking-wide">Open your phone's QR scanner</span>
                                         </div>
                                         <div className="flex items-center gap-4">
                                             <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-white text-[13px] font-bold shrink-0">2</div>
-                                            <span className="text-[#a1a1aa] text-[16px] font-medium tracking-wide">Point it at the QR code</span>
+                                            <span className="text-[#a1a1aa] text-[16px] font-medium tracking-wide">Scan the QR code below</span>
                                         </div>
                                         <div className="flex items-center gap-4">
                                             <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-white text-[13px] font-bold shrink-0">3</div>
@@ -110,7 +120,7 @@ const DownloadBtn = ({ variant = 'default', varient }: DownloadBtnProps) => {
             {/* Mobile View (Direct Link) */}
             <div className="block md:hidden w-full">
                 <a
-                    href="https://play.google.com/store/apps/details?id=com.drydash.newCustomer&hl=en_IN"
+                    href={isIOS ? "https://apps.apple.com/in/app/drydash/id6761757578" : "https://play.google.com/store/apps/details?id=com.drydash.newCustomer&hl=en_IN"}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full flex justify-center"
@@ -131,7 +141,7 @@ const DownloadBtn = ({ variant = 'default', varient }: DownloadBtnProps) => {
                                 style={{ borderRadius: '12px' }}
                                 className="bg-[linear-gradient(45deg,#152B28,#21453F)] text-white text-[15px] w-full px-8 h-12 flex items-center justify-center gap-3 transition-transform active:scale-[0.98]"
                             >
-                                <Image src={PlaystoreLogo} alt="Play Store" className="w-5 h-auto text-white fill-white stroke-white" />
+                                <Image src={isIOS ? AppStoreLogo : PlaystoreLogo} alt={isIOS ? "App Store" : "Play Store"} className="w-5 h-auto text-white fill-white stroke-white" />
                                 Download App
                             </div>
                         </div>

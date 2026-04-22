@@ -36,7 +36,7 @@ const Step02 = () => {
             transition={{ duration: 0.4, ease: "anticipate", delay: 0.14 }}
             className="text-[#161511] md:text-start max-w-xl self-end md:self-start md:w-[30%] w-full"
           >
-            <h2 className="text-4xl md:text-5xl 2xl:text-[100px] font-bold mb-6 leading-tight select-none">
+            <h2 className="text-4xl md:text-5xl 2xl:text-[100px] font-bold mb-6 leading-tight select-none font-didot">
               <span className="block">Rider</span>
               <span className="block">Assigned</span>
             </h2>

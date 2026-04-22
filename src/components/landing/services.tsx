@@ -9,11 +9,11 @@ import { ProgressiveBlur } from '@/components/motion-primitives/progressive-blur
 import Link from 'next/link';
 
 const servicesList = [
-    {
-        title: "Laundry",
-        image: "/Assests/Images/laundry_card.jpg",
-        active: true
-    },
+    // {
+    //     title: "Laundry",
+    //     image: "/Assests/Images/laundry_card.jpg",
+    //     active: true
+    // },
     {
         title: "Dry Cleaning",
         image: "/Assests/Images/dry_cleaning_card.jpg",
@@ -176,22 +176,23 @@ const Services = () => {
     return (
 
         <section className="bg-[url('/Assests/Images/background_gradiant.jpg')] mx-auto 
-  bg-cover bg-center bg-no-repeat 
-  md:w-[90%] w-full min-h-screen 
-  md:py-16 py-0 
-  md:border-6 border-0 border-[#E2DEC6]/20 
-  md:p-6 p-0 md:rounded-4xl 
-  flex flex-col justify-center items-center mb-20
-  mask-[linear-gradient(to_bottom,black_70%,transparent)]
-  -webkit-mask-image-[linear-gradient(to_bottom,black_70%,transparent)]
-  ">
+        bg-cover bg-center bg-no-repeat 
+        2xl:w-[80%] md:w-[98%] w-full min-h-screen 
+        md:py-16 py-0 
+        md:border-6 border-0 border-[#E2DEC6]/20 
+        md:p-6 p-0 md:rounded-4xl 
+        flex flex-col justify-center items-center mb-20
+        mask-[linear-gradient(to_bottom,black_70%,transparent)]
+        -webkit-mask-image-[linear-gradient(to_bottom,black_70%,transparent)]
+        ">
             <Container>
+
                 <style>{`
                 @keyframes cursorBlink {
                     0%, 100% { opacity: 1; }
                     50% { opacity: 0; }
-                }
-            `}</style>
+                    }`
+                }</style>
                 <div className="w-full max-w-[1300px] mx-auto 2xl:px-0 md:px-10 p-2">
                     {/* Header Section */}
                     <InView
@@ -217,7 +218,7 @@ const Services = () => {
                                 className="w-full md:w-1/2"
                             >
                                 <p className="text-lg tracking-wide mb-6 text-gray-400">/ Service we offers</p>
-                                <h2 className="2xl:text-[108px] md:text-6xl/normal text-5xl/normal font-normal leading-[1.05] text-white tracking-wide">
+                                <h2 className="2xl:text-7xl font-didot md:text-6xl/normal text-5xl/normal font-normal leading-[1.05] text-white tracking-wide">
                                     Swift<br /><TypewriterText words={cursorText} />
                                 </h2>
                             </motion.div>
@@ -229,8 +230,8 @@ const Services = () => {
                                 }}
                                 className="w-full md:w-[45%] 2xl:pb-4 pb-0"
                             >
-                                <p className="2xl:text-[16px]/[24.2px] text-[15px]/normal tracking-wide mb-8 font-light text-gray-300">
-                                    We offer shoe spa, dry cleaning and laundry, along with on-site services
+                                <p className="2xl:text-[16px]/[24.2px] text-[15px]/normal tracking-wide mb-8 font-light text-gray-300 w-[80%]">
+                                    We offer shoe spa and dry cleaning, along with on-site services
                                     and car wash. With our 8-hour express delivery you get
                                     everything cleaned and ready the same day.
                                 </p>

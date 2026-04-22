@@ -46,7 +46,7 @@ const WhychoosDD = () => {
                 >
                     <div className="mb-10">
                         <h2 className="text-lg tracking-wide mb-6 text-gray-400">
-                            <span className="text-md tracking-wide mb-6 text-gray-400">/</span>{' '}
+                            <span className="tracking-wide mb-6 text-gray-400">/</span>{' '}
                             Why choose Drydash?
                         </h2>
                     </div>

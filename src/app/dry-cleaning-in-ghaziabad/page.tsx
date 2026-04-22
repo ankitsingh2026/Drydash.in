@@ -25,11 +25,11 @@ import { testimonialsRow2, TestimonialCard } from '@/components/landing/testimon
 
 // Data
 const servicesList = [
-    {
-        title: "Laundry",
-        desc: "Expert garment care using eco-conscious solvents and artisanal finishing techniques.",
-        icon: Leaf
-    },
+    // {
+    //     title: "Laundry",
+    //     desc: "Expert garment care using eco-conscious solvents and artisanal finishing techniques.",
+    //     icon: Leaf
+    // },
     {
         title: "Dry Cleaning",
         desc: "Delicate treatment for high-fashion pieces, ensuring longevity and pristine texture.",
@@ -141,7 +141,7 @@ const DryCleaningPage = () => {
                         {/* Title */}
                         <h1
                             ref={heroTitleRef}
-                            className="text-4xl md:text-6xl 2xl:text-[90px] font-normal leading-[1.1] mb-8 tracking-tight"
+                            className="text-4xl md:text-6xl 2xl:text-[90px] font-normal leading-[1.1] mb-8 tracking-tight font-didot"
                         >
                             Premium Cleaning Services<br />
                             <span className="text-[#03D391] italic font-serif">Across Ghaziabad</span>
@@ -152,8 +152,7 @@ const DryCleaningPage = () => {
                             ref={heroSubtitleRef}
                             className="text-[#8a928e] text-[16px] md:text-[18px] 2xl:text-[20px] max-w-2xl mb-12 leading-relaxed tracking-wide"
                         >
-                            Fresh, reliable, and eco-conscious laundry, dry cleaning, and more—
-                            designed around your lifestyle with digital precision.
+                            overnight garment and shoe care
                         </p>
 
                         {/* Buttons */}
@@ -199,7 +198,7 @@ const DryCleaningPage = () => {
                         </InView>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-5 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 2xl:grid-cols-4 gap-6">
                         {servicesList.map((svc, i) => (
                             <InView
                                 key={i}
@@ -346,7 +345,7 @@ const DryCleaningPage = () => {
                                 visible: { opacity: 1, scale: 1, transition: { duration: 0.8 } }
                             }}
                         >
-                            <h2 className="text-4xl md:text-5xl font-black text-black mb-8 tracking-tight max-w-3xl leading-[1.05] relative z-20">
+                            <h2 className="text-4xl md:text-5xl font-black text-black mb-8 tracking-tight max-w-3xl leading-[1.05] relative z-20 font-didot">
                                 Experience Effortless Cleaning Today
                             </h2>
                             <p className="text-black/70 text-[16px] md:text-[18px] mb-12 2xl:max-w-xl max-w-md text-center mx-auto font-medium relative z-20">

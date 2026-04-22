@@ -25,11 +25,11 @@ import { testimonialsRow2, TestimonialCard } from '@/components/landing/testimon
 
 // Data
 const servicesList = [
-    {
-        title: "Laundry",
-        desc: "Expert garment care using eco-conscious solvents and artisanal finishing techniques.",
-        icon: Leaf
-    },
+    // {
+    //     title: "Laundry",
+    //     desc: "Expert garment care using eco-conscious solvents and artisanal finishing techniques.",
+    //     icon: Leaf
+    // },
     {
         title: "Dry Cleaning",
         desc: "Delicate treatment for high-fashion pieces, ensuring longevity and pristine texture.",
@@ -141,7 +141,7 @@ const DryCleaningPage = () => {
                         {/* Title */}
                         <h1
                             ref={heroTitleRef}
-                            className="text-4xl md:text-6xl 2xl:text-[90px] font-normal leading-[1.1] mb-8 tracking-tight"
+                            className="text-4xl md:text-6xl 2xl:text-[90px] font-normal leading-[1.1] mb-8 tracking-tight font-didot"
                         >
                             Premium Cleaning Services<br />
                             <span className="text-[#03D391] italic font-serif">Across Gurgaon</span>
@@ -152,8 +152,7 @@ const DryCleaningPage = () => {
                             ref={heroSubtitleRef}
                             className="text-[#8a928e] text-[16px] md:text-[18px] 2xl:text-[20px] max-w-2xl mb-12 leading-relaxed tracking-wide"
                         >
-                            Fresh, reliable, and eco-conscious laundry, dry cleaning, and more—
-                            designed around your lifestyle with digital precision.
+                            overnight garment and shoe care
                         </p>
 
                         {/* Buttons */}
@@ -190,7 +189,7 @@ const DryCleaningPage = () => {
                                 visible: { opacity: 1, y: 0, transition: { duration: 0.8 } }
                             }}
                         >
-                            <h2 className="text-3xl md:text-5xl 2xl:text-6xl font-normal text-[#E2DEC6] mb-6 tracking-tight">
+                            <h2 className="text-3xl md:text-5xl 2xl:text-6xl font-normal text-[#E2DEC6] mb-6 tracking-tight font-didot">
                                 Expert Care for Every Fabric
                             </h2>
                             <p className="text-[#8a928e] text-[16px] 2xl:text-[18px] max-w-xl">
@@ -199,7 +198,7 @@ const DryCleaningPage = () => {
                         </InView>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-5 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 2xl:grid-cols-4 gap-6">
                         {servicesList.map((svc, i) => (
                             <InView
                                 key={i}

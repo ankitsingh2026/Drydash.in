@@ -54,7 +54,7 @@ const PrivacyPolicyPage = () => {
                     }}
                 >
                     <div className="flex flex-col md:items-center md:justify-center justify-start text-left md:text-center mb-16 gap-4">
-                        <h1 className="text-4xl md:text-5xl 2xl:text-6xl font-black tracking-tight">
+                        <h1 className="text-4xl md:text-5xl 2xl:text-6xl font-black tracking-tight font-didot">
                             Privacy Policy
                         </h1>
                         <p className="text-sm md:text-md text-[#8a928e] font-medium">
@@ -78,6 +78,10 @@ const PrivacyPolicyPage = () => {
                                             <a
                                                 key={section.id}
                                                 href={`#${section.id}`}
+                                                onClick={(e) => {
+                                                    e.preventDefault();
+                                                    document.getElementById(section.id)?.scrollIntoView({ behavior: 'smooth' });
+                                                }}
                                                 className={`group flex items-center py-3 px-6 text-[13px] 2xl:text-[14px] font-medium transition-all duration-300 border-l-2 -ml-px ${isActive
                                                     ? "text-[#03D391] border-[#03D391] bg-[#03D391]/5"
                                                     : "text-[#8a928e] border-transparent hover:text-white/60 hover:bg-white/5"

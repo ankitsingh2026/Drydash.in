@@ -48,13 +48,12 @@ const differentiatorFeatures = [
 ];
 
 const serviceItems = [
+    { icon: <WashingMachineIcon size={28} />, text: "Dry Cleaning" },
     { icon: <FootprintsIcon size={28} />, text: "Premium Shoe Spa" },
     { icon: <House size={28} weight="fill" />, text: "On-site" },
     { icon: <Car size={28} weight="fill" />, text: "Car Wash" },
     { icon: <Clock size={28} weight="fill" />, text: "8-Hours Delivery" },
     { icon: <Handbag size={28} weight="fill" />, text: "Premium Bag Care" },
-    { icon: <TShirtIcon size={28} />, text: "Premium Laundry" },
-    { icon: <WashingMachineIcon size={28} />, text: "Dry Cleaning" },
     { icon: <WindIcon size={28} />, text: "Ironing & Pressing" }
 ];
 
@@ -71,11 +70,11 @@ const AboutUsPage = () => {
                     }}
                 >
                     <div className="flex flex-col md:items-center md:justify-center justify-start text-left md:text-center mt-20 mb-16 ">
-                        <h1 className="text-4xl md:text-5xl font-black mb-4 tracking-tight">
+                        <h1 className="text-4xl md:text-5xl font-black mb-4 tracking-tight font-didot">
                             About DryDash
                         </h1>
-                        <p className="text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] text-white/60">
-                            OWNED AND OPERATED BY GYLD SOLUTIONS PRIVATE LIMITED
+                        <p className="text-[10px] md:text-xs font-bold  tracking-[0.2em] text-white/60">
+                            Owned and operated by Gyld Solutions Private Limited
                         </p>
                     </div>
                 </InView>
@@ -92,7 +91,7 @@ const AboutUsPage = () => {
                         }}
                     >
                         <p className="text-base md:text-md leading-relaxed text-[#8a928e]">
-                            DryDash is a premium laundry and garment care platform developed and operated by Gyld Solutions Pvt. Ltd., a forward-thinking company focused on building innovative, technology-driven service solutions.
+                            DryDash is a premium dryclean and garment care platform developed and operated by Gyld Solutions Pvt. Ltd., a forward-thinking company focused on building innovative, technology-driven service solutions.
                         </p>
                     </InView>
 
@@ -106,13 +105,13 @@ const AboutUsPage = () => {
                     >
                         <div>
                             <h2 className="text-2xl font-bold mb-6">
-                                Redefining Laundry with Speed, Care & Convenience
+                                Redefining Drycleaning with Speed, Care & Convenience
                             </h2>
                             <p className="text-sm text-[#8a928e] leading-relaxed mb-6">
-                                DryDash is built for modern lifestyles where time matters. We provide seamless, on-demand shoe spa, dry cleaning, and laundry services with fast doorstep pickup and delivery.
+                                DryDash is built for modern lifestyles where time matters. We provide seamless, on-demand shoe spa and dry cleaning services with fast doorstep pickup and delivery.
                             </p>
                             <p className="text-sm text-[#8a928e] leading-relaxed">
-                                Our goal is simple — eliminate the hassle of laundry while delivering premium quality care.
+                                Our goal is simple — eliminate the hassle of drycleaning while delivering premium quality care.
                             </p>
                         </div>
                     </InView>
@@ -148,7 +147,7 @@ const AboutUsPage = () => {
                             <div className="mb-14">
                                 <h3 className="text-md font-bold text-white mb-6 underline underline-offset-8 decoration-white/10 decoration-1">Our Vision</h3>
                                 <p className="text-base md:text-md text-[#8a928e] leading-relaxed">
-                                    To become the most trusted on-demand laundry and garment care brand, known for speed, quality, and consistency.
+                                    To become the most trusted on-demand dry cleaning and garment care brand, known for speed, quality, and consistency.
                                 </p>
                             </div>
 
@@ -156,8 +155,8 @@ const AboutUsPage = () => {
                                 <h3 className="text-md font-bold text-white mb-8 underline underline-offset-8 decoration-white/10 decoration-1">Our Mission</h3>
                                 <ul className="space-y-5">
                                     {[
-                                        "Deliver hassle-free laundry services using smart technology",
-                                        "Maintain premium quality standards in garment care",
+                                        "Deliver hassle-free dry cleaning and garment care services using smart technology",
+                                        "Maintain premium quality standards in dry cleaning and garment care",
                                         "Ensure fast and reliable doorstep pickup & delivery",
                                         "Create a seamless and satisfying customer experience"
                                     ].map((item, idx) => (
@@ -251,7 +250,7 @@ const AboutUsPage = () => {
                         }}
                     >
                         <div className="mt-32 pt-24 border-t border-white/5 text-center flex flex-col items-center">
-                            <h3 className="text-3xl md:text-5xl font-black mb-10 leading-tight">
+                            <h3 className="text-3xl md:text-5xl font-black mb-10 leading-tight font-didot">
                                 Freshness, Care & Confidence — Delivered
                             </h3>
                             <p className="text-sm text-[#8a928e] mb-12 max-w-lg">

@@ -16,7 +16,7 @@ const Downloadwall = () => {
             <section className="md:hidden relative w-full bg-[#FFCC00] rounded-[2rem] px-6 pt-10 pb-0 flex flex-col items-center overflow-hidden mb-20">
                 {/* Title */}
                 <div className="w-full mb-6">
-                    <h2 className="text-[26px] font-black text-[#152B28] leading-[1.15] tracking-tight">
+                    <h2 className="text-[26px] font-black text-[#152B28] leading-[1.15] tracking-tight font-didot">
                         Clean Clothes. Zero Hassle.<br />DryDash
                     </h2>
                 </div>
@@ -33,13 +33,15 @@ const Downloadwall = () => {
 
                 {/* App Buttons */}
                 <div className="flex flex-col gap-4 w-full items-center mb-8">
-                    <button onClick={() => toast.info('Coming soon for iOS')} className="bg-black text-white flex items-center justify-center gap-3 px-6 py-3.5 rounded-xl w-[200px]">
-                        <Image src={AppstoreLogo} alt="App Store" className="w-[30px] h-auto" />
-                        <div className="flex flex-col items-start gap-[2px]">
-                            <span className="text-[9px] text-white/70 leading-none font-medium uppercase tracking-wider">Get it on</span>
-                            <span className="text-[15px] font-bold leading-none tracking-tight">App Store</span>
-                        </div>
-                    </button>
+                    <a target="_blank" href="https://apps.apple.com/in/app/drydash/id6761757578">
+                        <button className="bg-black text-white flex items-center justify-center gap-3 px-6 py-3.5 rounded-xl w-[200px]">
+                            <Image src={AppstoreLogo} alt="App Store" className="w-[30px] h-auto" />
+                            <div className="flex flex-col items-start gap-[2px]">
+                                <span className="text-[9px] text-white/70 leading-none font-medium uppercase tracking-wider">Get it on</span>
+                                <span className="text-[15px] font-bold leading-none tracking-tight">App Store</span>
+                            </div>
+                        </button>
+                    </a>
                     <a target="_blank" href="https://play.google.com/store/apps/details?id=com.drydash.newCustomer&hl=en_IN">
                         <button className="bg-black text-white flex items-center justify-center gap-3 px-6 py-3.5 rounded-xl w-[200px]">
                             <Image src={PlaystoreLogo} alt="Play Store" className="w-[30px] h-auto" />
@@ -66,7 +68,7 @@ const Downloadwall = () => {
 
                 {/* Left Side Content */}
                 <div className="flex flex-col z-20 w-full lg:w-[55%] mb-10 lg:mb-0">
-                    <h2 className="md:text-4xl text-2xl 2xl:text-5xl font-black text-[#152B28] leading-[1.1] mb-6 tracking-tight">
+                    <h2 className="md:text-4xl text-2xl 2xl:text-5xl font-black text-[#001714] leading-[1.1] mb-6 tracking-tight font-didot">
                         Clean Clothes. Zero Hassle.<br />DryDash
                     </h2>
                     <p className="text-[#152B28]/85 text-[15px] 2xl:text-[16px] leading-[1.6] mb-10 max-w-[500px]">
@@ -87,13 +89,15 @@ const Downloadwall = () => {
 
                     {/* App Store and playstore Buttons */}
                     <div className="flex flex-col sm:flex-row gap-4">
-                        <button onClick={() => toast.info('Coming soon for iOS')} className="bg-black text-white flex items-center justify-center gap-3 px-4 py-2 rounded-xl hover:bg-black transition-colors w-[180px] cursor-pointer">
-                            <Image src={AppstoreLogo} alt="Play Store" className="w-6 h-auto" />
-                            <div className="flex flex-col items-start gap-[2px]">
-                                <span className="text-[10px] text-white/70 leading-none font-medium uppercase tracking-wide">Get it on</span>
-                                <span className="text-[17px] font-bold leading-none tracking-tight">App Store</span>
-                            </div>
-                        </button>
+                        <a target="_blank" href="https://apps.apple.com/in/app/drydash/id6761757578">
+                            <button className="bg-black text-white flex items-center justify-center gap-3 px-6 py-3 rounded-xl hover:bg-black transition-colors w-[180px] cursor-pointer">
+                                <Image src={AppstoreLogo} alt="Play Store" className="w-6 h-auto" />
+                                <div className="flex flex-col items-start gap-[2px]">
+                                    <span className="text-[10px] text-white/70 leading-none font-medium uppercase tracking-wide">Get it on</span>
+                                    <span className="text-[17px] font-bold leading-none tracking-tight">App Store</span>
+                                </div>
+                            </button>
+                        </a>
                         <a target="_blank" href="https://play.google.com/store/apps/details?id=com.drydash.newCustomer&hl=en_IN">
                             <button className="bg-black text-white flex items-center justify-center gap-3 px-6 py-3 rounded-xl hover:bg-black transition-colors w-[180px] cursor-pointer">
                                 <Image src={PlaystoreLogo} alt="Play Store" className="w-6 h-auto" />

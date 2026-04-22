@@ -15,11 +15,11 @@ import {
 import DownloadBtn from '@/components/DownloadBtn/downloadBtn';
 
 const services = [
-    {
-        icon: <WashingMachineIcon size={24} weight="light" />,
-        title: "Laundry",
-        description: "Expert garment care using eco-conscious solvents and artisanal finishing techniques."
-    },
+    // {
+    //     icon: <WashingMachineIcon size={24} weight="light" />,
+    //     title: "Laundry",
+    //     description: "Expert garment care using eco-conscious solvents and artisanal finishing techniques."
+    // },
     {
         icon: <CoatHangerIcon size={24} weight="light" />,
         title: "Dry Cleaning",
@@ -55,7 +55,7 @@ const ServicesPage = () => {
                     }}
                 >
                     <div className="flex flex-col md:items-center md:justify-center justify-start text-left md:text-center mb-16 gap-4">
-                        <h1 className="text-4xl md:text-5xl 2xl:text-6xl font-black tracking-tight">
+                        <h1 className="text-4xl md:text-5xl 2xl:text-6xl font-black tracking-tight font-didot">
                             Our Services
                         </h1>
                         <p className="text-sm md:text-base text-[#8a928e] max-w-2xl mx-auto leading-relaxed">
@@ -67,7 +67,7 @@ const ServicesPage = () => {
                 </InView>
 
                 {/* ── SERVICE GRID ── */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mb-32">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-32 justify-center">
                     {services.map((service, idx) => (
                         <InView
                             key={idx}
@@ -85,7 +85,7 @@ const ServicesPage = () => {
                                 <div className="text-[#8a928e] group-hover:text-white transition-colors mb-8 bg-white/5 w-fit p-3 rounded-xl border border-white/5">
                                     {service.icon}
                                 </div>
-                                <h3 className="text-xl 2xl:text-2xl font-bold mb-4 tracking-tight">
+                                <h3 className="text-xl 2xl:text-2xl font-bold mb-4 tracking-tight ">
                                     {service.title}
                                 </h3>
                                 <p className="text-[13px] md:text-[14px] leading-relaxed text-[#8a928e] mb-10 group-hover:text-white/80 transition-colors">
@@ -118,7 +118,7 @@ const ServicesPage = () => {
                         <div className="absolute inset-0 bg-linear-to-br from-[#03D391]/5 via-transparent to-transparent pointer-events-none" />
 
                         <div className="relative z-10 space-y-8">
-                            <h2 className="text-3xl md:text-5xl font-black leading-tight tracking-tight max-w-2xl mx-auto">
+                            <h2 className="text-3xl md:text-5xl font-black leading-tight tracking-tight max-w-2xl mx-auto font-didot">
                                 Ready for a curated experience?
                             </h2>
                             <p className="text-[14px] md:text-base text-[#8a928e] max-w-xl mx-auto leading-relaxed">
@@ -128,10 +128,8 @@ const ServicesPage = () => {
 
                             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6">
                                 <DownloadBtn />
-                                <Link href="/about-us" className='cursor-pointer'>
-                                    <div className="p-[2px] 2xl:rounded-xl rounded-lg bg-[linear-gradient(20deg,#142926,#458F83)] will-change-transform w-full sm:w-auto flex justify-center cursor-pointer">
-                                        <button className='bg-[#0E0F0E] text-[#458F83] 2xl:text-lg text-[15px] 2xl:w-50 w-full px-8 2xl:h-14 h-12 flex items-center justify-center gap-3 transition-transform active:scale-[0.98] rounded-lg cursor-pointer'>Learn More</button>
-                                    </div>
+                                <Link href="/about-us" className='p-[2px] 2xl:rounded-xl rounded-lg bg-[linear-gradient(20deg,#142926,#458F83)] will-change-transform w-full sm:w-auto flex justify-center cursor-pointer'>
+                                    <button className='bg-[#0E0F0E] text-[#458F83] 2xl:text-lg text-[15px] 2xl:w-50 w-full px-8 2xl:h-14 h-12 flex items-center justify-center gap-3 transition-transform active:scale-[0.98] rounded-lg cursor-pointer'>Learn More</button>
                                 </Link>
                             </div>
                         </div>

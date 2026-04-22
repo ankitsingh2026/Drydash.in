@@ -39,7 +39,7 @@ const Step06 = () => {
               transition={{ duration: 0.6, ease: "anticipate", delay: 0.2 }}
               className="text-[#161511]"
             >
-              <h2 className="text-4xl md:text-5xl 2xl:text-[100px] font-bold mb-6 leading-tight select-none">
+              <h2 className="text-4xl md:text-5xl 2xl:text-[100px] font-bold mb-6 leading-tight select-none font-didot">
                 <span className="block">Professional</span>
                 <span className="block">Cleaning</span>
               </h2>

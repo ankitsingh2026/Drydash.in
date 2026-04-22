@@ -9,21 +9,16 @@ import BottomBlur from "@/components/common/bottomBlur";
 import { ReactLenis } from "@/lib/lenis"
 import { Toaster } from 'sonner';
 
-const helvetica = localFont({
-  src: "../../public/Assests/Fonts/Helovatica.woff2",
+const helveticaNeue = localFont({
+  src: "../../public/Assests/Fonts/HelveticaNeueMedium.otf",
   variable: "--font-sans",
 });
 
+const didot = localFont({
+  src: "../../public/Assests/Fonts/Didot Medium.ttf",
+  variable: "--font-didot",
+})
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Drydash",
@@ -38,17 +33,17 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning
       lang="en"
-      className={cn("h-full", "antialiased", geistSans.variable, geistMono.variable, helvetica.variable, "font-sans")}
+      className={cn("antialiased", helveticaNeue.variable, didot.variable, "font-sans")}
     >
-      <ReactLenis root>
-        <body className="min-h-full flex flex-col" suppressHydrationWarning>
+      <body className="min-h-screen flex flex-col" suppressHydrationWarning>
+        <ReactLenis root options={{ autoResize: true }}>
           <Navbar />
           {children}
           <BottomBlur />
           <Footer />
           <Toaster />
-        </body>
-      </ReactLenis>
+        </ReactLenis>
+      </body>
     </html>
   );
 }

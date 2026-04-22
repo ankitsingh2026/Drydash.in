@@ -10,19 +10,21 @@ export async function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }) {
-  const blog = BLOGS.find((b) => b.slug === params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const blog = BLOGS.find((b) => b.slug === slug);
 
   return {
-    title: blog ? `${blog.slug} | Washrz` : 'Blog',
+    title: blog ? `${slug} | Washrz` : 'Blog',
     description: 'Read expert insights and tips from Washrz.',
   };
 }
 
-export default function Page({ params }: { params: { slug: string } }) {
-  const blog = BLOGS.find((b) => b.slug === params.slug);
+export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const blog = BLOGS.find((b) => b.slug === slug);
 
   if (!blog) notFound();
 
-  return <ClientBlogPage slug={params.slug} />;
+  return <ClientBlogPage slug={slug} />;
 }

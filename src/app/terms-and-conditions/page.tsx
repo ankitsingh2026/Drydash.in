@@ -17,7 +17,7 @@ const TermsAndConditionsPage = () => {
                     }}
                 >
                     <div className="flex flex-col md:items-center md:justify-center justify-start text-left md:text-center mt-20 mb-16 ">
-                        <h1 className="text-4xl md:text-5xl font-black mb-4 tracking-tight">
+                        <h1 className="text-4xl md:text-5xl font-black mb-4 tracking-tight font-didot">
                             Terms & Conditions
                         </h1>
                         <p className="text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] text-white/60">
@@ -28,7 +28,7 @@ const TermsAndConditionsPage = () => {
 
                 {/* ── CENTERED CONTENT COLUMN ── */}
                 <div className="w-full max-w-[800px] mx-auto space-y-16 mb-24">
-                    
+
                     {/* Intro paragraph */}
                     <InView
                         viewOptions={{ once: true }}
